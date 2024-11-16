@@ -1,9 +1,12 @@
 module cn.lifetool.app {
-    requires javafx.controls;
-    requires javafx.fxml;
+  requires javafx.controls;
+  requires javafx.fxml;
+  requires org.controlsfx.controls;
+  requires java.desktop;
+  requires cn.hutool;
 
-    requires org.controlsfx.controls;
+  opens cn.lifetool.app to
+      javafx.fxml;
 
-    opens cn.lifetool.app to javafx.fxml;
-    exports cn.lifetool.app;
+  exports cn.lifetool.app;
 }
